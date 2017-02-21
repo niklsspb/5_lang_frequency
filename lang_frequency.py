@@ -16,11 +16,11 @@ def get_most_frequent_words(text):
 
 if __name__ == '__main__':
     file_name = input('Введите путь к файлу ')
-    data = load_data(file_name)
-    if data is None:
+    data_input = load_data(file_name)
+    if data_input is None:
         print('Хьюстон у нас проблемы, возможно не верно указан путь к файлу')
     else:
-        load_dictionary = get_most_frequent_words()
+        load_dictionary = get_most_frequent_words(data_input)
         sort_dictionary = sorted(load_dictionary.items(), key = lambda l: l[1], reverse=True)
         for i in range(0,9):
             print (sort_dictionary[i][0],'-' ,sort_dictionary[i][1])
