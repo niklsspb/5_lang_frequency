@@ -7,7 +7,7 @@ import argparse
 def load_data(path_to_file):
     if not os.path.exists(path_to_file):
         return None
-    with open(path_to_file, 'r',encoding='utf8') as words_file:
+    with open(path_to_file, 'r') as words_file:
         text = words_file.read()
     return text
 
